@@ -13,7 +13,7 @@ if [ ! -f $BIN/$H2O_ZIP ]; then
     wget -P $BIN "$H2O_URL" --show-progress > /dev/null
 fi
 
-if [ ! -f $BIN/$H2O/ ]; then
+if [ ! -d $BIN/$H2O/ ]; then
     unzip "$BIN/$H2O_ZIP" -d "$BIN/$H2O/"
 fi
 
