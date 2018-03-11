@@ -14,7 +14,7 @@ if [ ! -f $BIN/$H2O_ZIP ]; then
 fi
 
 if [ ! -d $BIN/$H2O/ ]; then
-    unzip "$BIN/$H2O_ZIP" -d "$BIN/$H2O/"
+    unzip "$BIN/$H2O_ZIP" -d "$BIN/"
 fi
 
 # Run h2o in the background and upload the model to it
