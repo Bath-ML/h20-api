@@ -23,7 +23,5 @@ java -jar $BIN/$H2O/h2o.jar &>/dev/null &
 
 # Wait for h2o to start up...
 
-sleep 5
-
-curl -X POST "http://localhost:54321/99/Models.bin/not_in_use" --data "dir=$MODEL_PATH"
+curl -X POST "http://localhost:54321/99/Models.bin/not_in_use" --data "dir=$MODEL_PATH" --retry 5 --retry-connrefused --retry-delay 5
 
